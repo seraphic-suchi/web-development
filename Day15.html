@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 15 - JS Form Validation</title>
+</head>
+<body>
+  <h2>Registration Form</h2>
+
+  <form id="registerForm">
+    <label>Name:</label>
+    <input type="text" id="name"><br><br>
+
+    <label>Email:</label>
+    <input type="text" id="email"><br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password"><br><br>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <p id="error" style="color:red;"></p>
+
+  <script>
+    const form = document.getElementById("registerForm");
+    const error = document.getElementById("error");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault(); // stop actual submission
+
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let password = document.getElementById("password").value;
+
+      if (name === "" || email === "" || password === "") {
+        error.innerText = " All fields are required!";
+        return;
+      }
+
+      let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.match(emailPattern)) {
+        error.innerText = " Enter a valid email!";
+        return;
+      }
+
+      if (password.length < 6) {
+        error.innerText = " Password must be at least 6 characters!";
+        return;
+      }
+
+      error.style.color = "green";
+      error.innerText = " Registered successfully!";
+    });
+  </script>
+</body>
+</html>

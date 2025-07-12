@@ -1,0 +1,12 @@
+body {
+  background-image: url('https://picsum.photos/800/400');
+  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+}
+.header {
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  color: white;
+  padding: 30px;
+  text-align: center;
+  font-size: 24px;
+}

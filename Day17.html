@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 17 - jQuery UI Effects</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <style>
+    #box {
+      width: 200px;
+      height: 150px;
+      background-color: #4caf50;
+      color: white;
+      text-align: center;
+      line-height: 150px;
+      font-size: 20px;
+      margin: 20px auto;
+      border-radius: 12px;
+    }
+    button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>jQuery UI Demo</h2>
+  <div id="box">Hello </div>
+
+  <div style="text-align:center;">
+    <button id="bounce">Bounce</button>
+    <button id="shake">Shake</button>
+    <button id="explode">Explode</button>
+    <button id="highlight">Highlight</button>
+    <button id="hideShow">Toggle (Hide/Show)</button>
+  </div>
+
+  <script>
+    $("#bounce").click(() => {
+      $("#box").effect("bounce", { times: 3 }, 500);
+    });
+
+    $("#shake").click(() => {
+      $("#box").effect("shake");
+    });
+
+    $("#explode").click(() => {
+      $("#box").effect("explode", {}, 500, () => {
+        $("#box").show(); // restore
+      });
+    });
+
+    $("#highlight").click(() => {
+      $("#box").effect("highlight");
+    });
+
+    $("#hideShow").click(() => {
+      $("#box").toggle("blind", {}, 500);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 12 - JS Conditions & Loops</title>
+</head>
+<body>
+  <h2>Check Console for Output</h2>
+
+  <script>
+    // Condition
+    let score = 85;
+    if (score >= 90) {
+      console.log(" Grade: A+");
+    } else if (score >= 75) {
+      console.log("Grade: A");
+    } else {
+      console.log(" Grade: B or below");
+    }
+
+    // Loop
+    console.log(" Countdown:");
+    for (let i = 5; i >= 1; i--) {
+      console.log(i);
+    }
+
+    // Array + Loop
+    let tasks = ["HTML", "CSS", "JavaScript"];
+    for (let i = 0; i < tasks.length; i++) {
+      console.log(" Task " + (i + 1) + ": " + tasks[i]);
+    }
+  </script>
+</body>
+</html>

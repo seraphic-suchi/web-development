@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 13 - JS Functions</title>
+</head>
+<body>
+  <h2>Check Console for Output</h2>
+
+  <script>
+    // Basic Function
+    function greet() {
+      console.log(" Hello, Suchitra!");
+    }
+    greet();
+
+    // Function with parameters
+    function multiply(x, y) {
+      console.log("Result:", x * y);
+    }
+    multiply(4, 5);
+
+    // Function that returns value
+    function fullName(first, last) {
+      return first + " " + last;
+    }
+    let name = fullName("Suchitra", "PA");
+    console.log(" Full Name:", name);
+
+    // Function with logic
+    function isEligible(age) {
+      return age >= 18 ? "Eligible" : "Not eligible";
+    }
+    console.log("Driving Test:", isEligible(21));
+  </script>
+</body>
+</html>

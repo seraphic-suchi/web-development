@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 16 - jQuery Basics</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #box {
+      width: 200px;
+      height: 150px;
+      background-color: #4db6ac;
+      text-align: center;
+      line-height: 150px;
+      color: white;
+      font-weight: bold;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>jQuery Practice</h2>
+
+  <div id="box">Box</div>
+
+  <button id="hideBtn">Hide</button>
+  <button id="showBtn">Show</button>
+  <button id="toggleBtn">Toggle</button>
+  <button id="fadeBtn">Fade Out</button>
+  <button id="slideBtn">Slide Up</button>
+
+  <script>
+    $("#hideBtn").click(() => {
+      $("#box").hide();
+    });
+
+    $("#showBtn").click(() => {
+      $("#box").show();
+    });
+
+    $("#toggleBtn").click(() => {
+      $("#box").toggle();
+    });
+
+    $("#fadeBtn").click(() => {
+      $("#box").fadeOut();
+    });
+
+    $("#slideBtn").click(() => {
+      $("#box").slideUp();
+    });
+  </script>
+</body>
+</html>

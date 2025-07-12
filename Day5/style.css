@@ -1,0 +1,32 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfdfd;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #444;
+}
+
+.card {
+  background-color: #e0f7fa;
+  border: 2px solid #00acc1;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.footer {
+  margin-top: 30px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}

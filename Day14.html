@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 14 - JS Events & DOM</title>
+</head>
+<body>
+  <h2 id="heading">Welcome to DOM Practice</h2>
+  <input type="text" id="nameInput" placeholder="Enter your name">
+  <button id="btn">Greet Me</button>
+
+  <p id="message"></p>
+
+  <script>
+    // Select elements
+    let heading = document.getElementById("heading");
+    let input = document.getElementById("nameInput");
+    let button = document.getElementById("btn");
+    let message = document.getElementById("message");
+
+    // Handle button click
+    button.addEventListener("click", () => {
+      let userName = input.value;
+      if (userName.trim() !== "") {
+        message.innerHTML = "Hello, " + userName + "!";
+        heading.innerHTML = "Nice to meet you, " + userName + "!";
+      } else {
+        message.innerHTML = "Please enter your name first.";
+      }
+    });
+  </script>
+</body>
+</html>
